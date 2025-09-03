@@ -5,4 +5,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+    fontFamily: {
+    vazir: ['Vazirmatn', 'sans-serif'],
+    inter: ['Inter', 'sans-serif'],
+  }
 }
