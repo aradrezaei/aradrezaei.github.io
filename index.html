@@ -2,358 +2,215 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="author" content="Arad Rezaei" />
-  <meta name="keywords" content="آراد رضایی, آراد, رضایی, Arad Rezaei, برنامه‌نویس, توسعه‌دهنده, فرانت‌اند, بک‌اند, فول‌استک, Next.js, Django" />
-  <meta name="description" content="آراد رضایی — برنامه‌نویس و توسعه‌دهنده‌ی فول‌استک وب. طراحی و توسعه‌ی وب‌سایت‌های مدرن با سرعت بالا و سئوی حرفه‌ای." />
-  <link rel="canonical" href="https://Aradrezaei.github.io/Fa" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0f172a" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Arad Rezaei" />
+  <meta name="description" content="آراد رضایی — توسعه‌دهنده فول‌استک وب، متخصص Next.js و Django با تمرکز بر سرعت، سئو و طراحی مدرن." />
+  <meta name="keywords" content="Arad Rezaei, آراد رضایی, توسعه‌دهنده وب, فول‌استک, Next.js, Django, Tailwind, سئو" />
 
-<!-- داخل <head> اضافه کن -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-<style>
-  html {
-    font-family: Vazirmatn, Inter, sans-serif;
-  }
-  /* اگر خواستی فقط روی متن‌های انگلیسی اعمال بشه */
-  .latin {
-    font-family: Inter, sans-serif !important;
-    letter-spacing: -0.01em;
-  }
-</style>
- 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fa_IR" />
   <meta property="og:title" content="آراد رضایی | برنامه‌نویس فول‌استک" />
-  <meta property="og:description" content="وب‌سایت شخصی آراد رضایی — توسعه‌دهنده‌ی فول‌استک با تمرکز بر سرعت، سئو و طراحی مدرن." />
-  <meta property="og:url" content="https://Aradrezaei.github.io/Fa" />
-  <meta property="og:image" content="https://Aradrezaei.github.io/Fa/og-cover.jpg" />
-  <meta property="og:site_name" content="Arad Rezaei" />
+  <meta property="og:description" content="وب‌سایت شخصی آراد رضایی — توسعه‌ی وب سریع، ایمن و سئو محور." />
+  <meta property="og:url" content="https://aradrezaei.github.io/fa" />
+  <meta property="og:image" content="https://aradrezaei.github.io/fa/og-cover.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="آراد رضایی | برنامه‌نویس فول‌استک" />
-  <meta name="twitter:description" content="طراحی و توسعه‌ی وب‌سایت‌های مدرن با Tailwind، Next.js و Django." />
-  <meta name="twitter:image" content="https://Aradrezaei.github.io/Fa/og-cover.jpg" />
+  <meta name="twitter:description" content="توسعه وب مدرن با Tailwind، Next.js و Django." />
+  <meta name="twitter:image" content="https://aradrezaei.github.io/fa/og-cover.jpg" />
 
-  <!-- Favicons (اختیاری: فایل‌هایت را در ریپو بگذار) -->
-  <link rel="icon" href="/Fa/favicon.ico" />
-  <link rel="apple-touch-icon" href="/Fa/apple-touch-icon.png" />
+  <link rel="canonical" href="https://aradrezaei.github.io/fa" />
 
-  <!-- Fonts: Vazirmatn with swap -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.min.css" />
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.min.css" rel="stylesheet" media="all" />
-  <style>html{font-family:Vazirmatn,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}</style>
+  <!-- Favicons -->
+  <link rel="icon" href="/fa/favicon.ico" />
 
-  <!-- Tailwind CDN (بدون پلاگین‌های سنگین) -->
+  <!-- Font Shabnam -->
+  <link rel="preconnect" href="https://cdn.fontcdn.ir" crossorigin />
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" />
+  <style>
+    html { font-family: 'Shabnam', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .glass { backdrop-filter: blur(16px) saturate(150%); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);}
+    .reveal {opacity:0; transform: translateY(16px); transition: all .6s ease;}
+    .reveal.is-visible {opacity:1; transform: none;}
+  </style>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
-          container: { center: true, padding: '1rem' },
+          fontFamily: { shabnam: ['Shabnam','sans-serif'] },
           colors: {
-            base: { 900: '#0f172a', 800: '#111827' },
-            brand: { DEFAULT: '#14b8a6', 600:'#0ea5a3', 700:'#0d9488' }
-          }
+            brand: { DEFAULT:'#10b981', dark:'#059669' },
+            base: { 900:'#0f172a', 800:'#111827' }
+          },
+          boxShadow: { glow: '0 0 20px rgba(16,185,129,0.35)' },
+          container: { center:true, padding:'1rem' }
         }
       }
     }
   </script>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Arad Rezaei",
-        "url": "https://Aradrezaei.github.io/Fa",
-        "inLanguage": "fa-IR",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.google.com/search?q=site:Aradrezaei.github.io+{query}",
-          "query-input": "required name=query"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Arad Rezaei",
-        "alternateName": "آراد رضایی",
-        "jobTitle": "Full-Stack Developer",
-        "url": "https://Aradrezaei.github.io/Fa",
-        "image": "https://Aradrezaei.github.io/Fa/arad-avatar.jpg",
-        "sameAs": [
-          "https://github.com/Aradrezaei"
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"خانه","item":"https://Aradrezaei.github.io/Fa"},
-          {"@type":"ListItem","position":2,"name":"نمونه‌کارها","item":"https://Aradrezaei.github.io/Fa#projects"},
-          {"@type":"ListItem","position":3,"name":"ارتباط","item":"https://Aradrezaei.github.io/Fa#contact"}
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <title>آراد رضایی | برنامه‌نویس فول‌استک • سرعت بالا + سئوی حرفه‌ای</title>
-  <style>
-    /* شیشه‌ای نرم */
-    .glass{backdrop-filter:saturate(180%) blur(14px);background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.08)}
-    /* انیمیشن ورودی سبک */
-    .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
-    .reveal.is-visible{opacity:1; transform:none}
-    @media (prefers-reduced-motion: reduce){
-      .reveal{transition:none}
-    }
-  </style>
+  <title>آراد رضایی | برنامه‌نویس فول‌استک • سرعت + سئو</title>
 </head>
 
-<body class="bg-base-900 font-vazir text-slate-100 selection:bg-brand/30">
-  <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-brand focus:text-black">پرش به محتوا</a>
+<body class="bg-base-900 text-slate-100 font-shabnam selection:bg-brand/30">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 px-4 py-2 rounded-lg bg-brand text-black">پرش به محتوا</a>
 
   <!-- Header -->
-  <header id="top" class="sticky top-0 z-40">
-    <div class="glass">
-      <nav class="container flex items-center justify-between py-3">
-        <a href="#top" class="flex items-center gap-3">
-          <span class="inline-block w-9 h-9 rounded-2xl bg-brand/20 ring-1 ring-brand/30"></span>
-          <span class="text-lg font-bold tracking-tight">آراد رضایی</span>
+  <header class="sticky top-0 z-40 backdrop-blur">
+    <nav class="glass">
+      <div class="container flex justify-between items-center py-3">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-lg font-bold">آراد رضایی</span>
         </a>
 
-        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/5" aria-expanded="false" aria-controls="mobileMenu" aria-label="باز کردن منو">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-
-        <ul class="hidden md:flex items-center gap-1">
-          <li><a class="px-3 py-2 rounded-xl hover:bg-white/5" href="#about">درباره</a></li>
-          <li><a class="px-3 py-2 rounded-xl hover:bg-white/5" href="#projects">نمونه‌کار</a></li>
-          <li><a class="px-3 py-2 rounded-xl hover:bg-white/5" href="#resume">رزومه</a></li>
-          <li><a class="px-3 py-2 rounded-xl hover:bg-white/5" href="#contact">ارتباط</a></li>
-          <li><a class="ms-2 px-4 py-2 rounded-xl bg-brand text-black hover:bg-brand/90" href="#contact">درخواست پروژه</a></li>
+        <ul class="hidden md:flex gap-2 items-center">
+          <li><a href="#about" class="px-3 py-2 rounded-xl hover:bg-white/5">درباره</a></li>
+          <li><a href="#projects" class="px-3 py-2 rounded-xl hover:bg-white/5">نمونه‌کار</a></li>
+          <li><a href="#resume" class="px-3 py-2 rounded-xl hover:bg-white/5">رزومه</a></li>
+          <li><a href="#contact" class="ms-2 px-4 py-2 rounded-xl bg-brand text-black hover:bg-brand/90">درخواست پروژه</a></li>
         </ul>
-      </nav>
-      <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden border-t border-white/10">
         <div class="container py-3 grid gap-2">
-          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#about">درباره</a>
-          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#projects">نمونه‌کار</a>
-          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#resume">رزومه</a>
-          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#contact">ارتباط</a>
-          <a class="px-3 py-2 rounded-lg bg-brand text-black hover:bg-brand/90" href="#contact">درخواست پروژه</a>
+          <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/5">درباره</a>
+          <a href="#projects" class="px-3 py-2 rounded-lg hover:bg-white/5">نمونه‌کار</a>
+          <a href="#resume" class="px-3 py-2 rounded-lg hover:bg-white/5">رزومه</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg bg-brand text-black hover:bg-brand/90">درخواست پروژه</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main id="main">
     <!-- Hero -->
     <section class="relative overflow-hidden">
       <div class="absolute inset-0 -z-10">
-        <div class="pointer-events-none absolute -top-32 -end-24 w-[48rem] h-[48rem] rounded-full bg-brand/10 blur-3xl"></div>
-        <div class="pointer-events-none absolute -bottom-40 -start-24 w-[42rem] h-[42rem] rounded-full bg-cyan-400/10 blur-3xl"></div>
+        <div class="absolute -top-32 -right-28 w-[40rem] h-[40rem] rounded-full bg-brand/10 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-24 w-[40rem] h-[40rem] rounded-full bg-cyan-400/10 blur-3xl"></div>
       </div>
-
       <div class="container pt-16 md:pt-24 pb-16 md:pb-28">
         <div class="grid md:grid-cols-2 gap-10 items-center">
           <div class="reveal">
-            <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
-              توسعه‌ی وب <span class="text-brand">سریع</span>، <span class="text-brand">ایمن</span> و <span class="text-brand">سئو-محور</span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight">
+              توسعه وب <span class="text-brand">سریع</span>، <span class="text-brand">ایمن</span> و <span class="text-brand">سئو-محور</span>
             </h1>
             <p class="mt-4 text-slate-300/90 leading-8">
-              من <strong>آراد رضایی</strong> هستم؛ برنامه‌نویس فول‌استک (Next.js/React + Django REST) با تمرکز بر
-              <span class="whitespace-nowrap">Core Web Vitals</span>، دسترسی‌پذیری و طراحی اولترا مدرن.
+               <strong>آراد رضایی</strong> هستم؛ فول‌استک دولوپر (Next.js / Django REST) با تمرکز بر
+              <span class="whitespace-nowrap">Core Web Vitals</span>، سئو و طراحی اولترا مدرن.
             </p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a href="#projects" class="px-5 py-3 rounded-xl bg-brand text-black hover:bg-brand/90">مشاهده نمونه‌کار</a>
+            <div class="mt-6 flex gap-3">
+              <a href="#projects" class="px-5 py-3 rounded-xl bg-gradient-to-r from-brand to-brand-dark text-black font-semibold hover:brightness-110 shadow-glow">مشاهده نمونه‌کار</a>
               <a href="#contact" class="px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5">شروع همکاری</a>
             </div>
-
-            <ul class="mt-8 grid grid-cols-3 gap-4 text-center">
-              <li class="glass rounded-2xl p-4">
-                <div class="text-2xl font-extrabold">99+</div>
-                <div class="text-sm text-slate-300">کامپوننت مدرن</div>
-              </li>
-              <li class="glass rounded-2xl p-4">
-                <div class="text-2xl font-extrabold">A+</div>
-                <div class="text-sm text-slate-300">PageSpeed</div>
-              </li>
-              <li class="glass rounded-2xl p-4">
-                <div class="text-2xl font-extrabold">100%</div>
-                <div class="text-sm text-slate-300">RTL & SEO</div>
-              </li>
-            </ul>
           </div>
 
-          <div class="reveal md:justify-self-end">
-            <figure class="relative glass rounded-3xl p-2 md:p-3">
-              <img src="arad-avatar.jpg" alt="آراد رضایی - برنامه‌نویس فول‌استک" width="560" height="560" loading="lazy" decoding="async" class="rounded-2xl object-cover aspect-square" />
-              <figcaption class="sr-only">پروفایل آراد رضایی</figcaption>
-              <div class="absolute -top-5 -end-5 glass rounded-2xl px-3 py-1 text-sm">Next.js • Django</div>
-              <div class="absolute -bottom-5 -start-5 glass rounded-2xl px-3 py-1 text-sm">Tailwind • SEO</div>
-            </figure>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="container py-16 md:py-24 reveal">
-      <h2 class="text-2xl md:text-3xl font-extrabold mb-6">درباره من</h2>
+      <h2 class="text-3xl font-extrabold mb-6">درباره من</h2>
       <p class="text-slate-300 leading-8">
-        توسعه‌دهنده‌ی فول‌استک با تجربه در پیاده‌سازی پنل‌های مدیریت سفارشی، احراز هویت امن، سیستم‌های رزرو و وبلاگ‌های حرفه‌ای.
-        در پروژه‌هایم اولویت با <strong>سرعت</strong>، <strong>دسترسی‌پذیری</strong>، <strong>سئو</strong> و <strong>تجربه کاربری</strong> است.
+        توسعه‌دهنده فول‌استک با تجربه در پنل‌های سفارشی، احراز هویت امن، سیستم رزرو و وبلاگ حرفه‌ای.
+        تمرکز اصلی بر <strong>سرعت</strong>، <strong>سئو</strong>، <strong>دسترسی‌پذیری</strong> و <strong>UI/UX مدرن</strong>.
       </p>
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="glass rounded-2xl p-5">
-          <div class="font-bold">تکنولوژی‌ها</div>
-          <div class="mt-2 text-sm text-slate-300">Next.js, React, Tailwind, Django, DRF, Docker</div>
-        </div>
-        <div class="glass rounded-2xl p-5">
-          <div class="font-bold">خدمات</div>
-          <div class="mt-2 text-sm text-slate-300">طراحی/توسعه، بهینه‌سازی عملکرد، سئو فنی، مشاوره</div>
-        </div>
-        <div class="glass rounded-2xl p-5">
-          <div class="font-bold">استانداردها</div>
-          <div class="mt-2 text-sm text-slate-300">Core Web Vitals، A11y، امنیت و کدنویسی تمیز</div>
-        </div>
-        <div class="glass rounded-2xl p-5">
-          <div class="font-bold">تحویل</div>
-          <div class="mt-2 text-sm text-slate-300">مستندات، نسخه‌بندی، CI/CD و نگه‌داری</div>
-        </div>
-      </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="container py-16 md:py-24 reveal">
-      <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl md:text-3xl font-extrabold">نمونه‌کارها</h2>
-        <a href="#contact" class="text-sm px-4 py-2 rounded-xl border border-white/15 hover:bg-white/5">درخواست مشابه</a>
+      <div class="flex justify-between items-center">
+        <h2 class="text-3xl font-extrabold">نمونه‌کارها</h2>
       </div>
-
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- کارت نمونه‌کار -->
-        <article class="group glass rounded-3xl overflow-hidden">
-          <a href="https://radcarsauto.com" target="_blank" rel="noopener" class="block">
-            <img src="thumb-radcars.jpg" alt="RadCars — وب‌سایت نمایشگاه خودرو" width="640" height="400" loading="lazy" decoding="async" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition" />
+        <article class="glass rounded-3xl overflow-hidden hover:shadow-glow transition">
+          <a href="https://radcarsauto.com" target="_blank">
+            <img src="thumb-radcars.jpg" alt="RadCars — وب‌سایت خودرو" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
             <div class="p-5">
               <h3 class="font-bold">RadCars — وب‌سایت خودرو</h3>
               <p class="mt-2 text-sm text-slate-300">Next.js + Tailwind + SEO پیشرفته</p>
             </div>
           </a>
         </article>
-
-        <article class="group glass rounded-3xl overflow-hidden">
-          <a href="#" class="block">
-            <img src="thumb-hadaf.jpg" alt="Hadaf — سامانه رزرو مشاوره" width="640" height="400" loading="lazy" decoding="async" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition" />
+          <article class="glass rounded-3xl overflow-hidden hover:shadow-glow transition">
+          <a href="https:/" target="_blank">
+            <img src="thumb-radcars.jpg" alt="RadCars — وب‌سایت خودرو" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
             <div class="p-5">
-              <h3 class="font-bold">Hadaf — رزرو مشاوره</h3>
-              <p class="mt-2 text-sm text-slate-300">Django REST + Next.js + OTP/Panel</p>
+              <h3 class="font-bold">Chasb line — وب سایت فروشگاه چسب لاین</h3>
+              <p class="mt-2 text-sm text-slate-300">Next.js + Tailwind + Djago-DRF + PostgreSQL</p>
             </div>
           </a>
         </article>
-
-        <article class="group glass rounded-3xl overflow-hidden">
-          <a href="#" class="block">
-            <img src="thumb-portfolio.jpg" alt="پورتفولیوی مدرن" width="640" height="400" loading="lazy" decoding="async" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition" />
-            <div class="p-5">
-              <h3 class="font-bold">Portfolio — فوق‌مدرن</h3>
-              <p class="mt-2 text-sm text-slate-300">Tailwind خالص + دسترسی‌پذیری</p>
-            </div>
-          </a>
+        <article class="glass rounded-3xl overflow-hidden hover:shadow-glow transition">
+          <img src="thumb-hadaf.jpg" alt="Hadaf — سامانه رزرو مشاوره" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
+          <div class="p-5">
+            <h3 class="font-bold">Hadaf — رزرو مشاوره</h3>
+            <p class="mt-2 text-sm text-slate-300">Django REST + Next.js + OTP/Panel</p>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- Resume -->
     <section id="resume" class="container py-16 md:py-24 reveal">
-      <h2 class="text-2xl md:text-3xl font-extrabold mb-6">رزومه‌ی خلاصه</h2>
+      <h2 class="text-3xl font-extrabold mb-6">رزومه</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="glass rounded-3xl p-6">
-          <h3 class="font-bold">مهارت‌های کلیدی</h3>
-          <ul class="mt-3 space-y-2 text-slate-300 text-sm leading-7">
-            <li>طراحی سیستم‌های مقیاس‌پذیر، معماری API و امنیت</li>
-            <li>بهینه‌سازی عملکرد (LCP/CLS/TTFB) و سئو فنی</li>
-            <li>UI/UX مدرن، RTL دقیق، دسترسی‌پذیری (WAI-ARIA)</li>
+          <h3 class="font-bold">مهارت‌ها</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li>طراحی API مقیاس‌پذیر و امن</li>
+            <li>بهینه‌سازی Core Web Vitals و سئو</li>
+            <li>UI/UX مدرن و دسترسی‌پذیری</li>
           </ul>
         </div>
         <div class="glass rounded-3xl p-6">
           <h3 class="font-bold">تجربه</h3>
-          <ul class="mt-3 space-y-2 text-slate-300 text-sm leading-7">
-            <li>RadCars: پیاده‌سازی کامل فرانت/بک + سئو</li>
-            <li>Hadaf: سامانه رزرو و پنل ادمین سفارشی</li>
-            <li>پروژه‌های سفارشی با Next.js, Django, Docker</li>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li>RadCars: توسعه کامل فرانت/بک</li>
+            <li>Hadaf: سامانه رزرو و پنل ادمین</li>
           </ul>
         </div>
-      </div>
-      <div class="mt-6">
-        <a href="resume.pdf" class="inline-flex items-center px-4 py-2 rounded-xl border border-white/15 hover:bg-white/5">دانلود رزومه PDF</a>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="container py-16 md:py-24 reveal">
       <div class="glass rounded-3xl p-6 md:p-10">
-        <h2 class="text-2xl md:text-3xl font-extrabold">شروع همکاری</h2>
-        <p class="mt-3 text-slate-300">ایده یا پروژه‌ای داری؟ در چند خط توضیح بده تا بررسی کنم.</p>
-        <!-- فرم ساده بدون بک‌اند -->
-        <form class="mt-6 grid gap-4" action="mailto:arad@example.com" method="POST" enctype="text/plain">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <input class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-brand" name="name" placeholder="نام و نام خانوادگی" required />
-            <input class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-brand" name="email" type="email" placeholder="ایمیل" required />
-          </div>
-          <input class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-brand" name="subject" placeholder="عنوان پروژه" />
-          <textarea class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-brand min-h-[140px]" name="message" placeholder="توضیحات کوتاه..." required></textarea>
-          <button class="justify-self-start px-5 py-3 rounded-xl bg-brand text-black hover:bg-brand/90">ارسال</button>
+        <h2 class="text-3xl font-extrabold">ارتباط با من</h2>
+        <p class="mt-3 text-slate-300">ایده یا پروژه‌ای داری؟ پیام بده.</p>
+        <form class="mt-6 grid gap-4" action="mailto:arad@example.com" method="POST">
+          <input name="name" placeholder="نام و نام خانوادگی" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand"/>
+          <input name="email" type="email" placeholder="ایمیل" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand"/>
+          <textarea name="message" placeholder="توضیحات پروژه..." class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand min-h-[120px]"></textarea>
+          <button class="justify-self-start px-5 py-3 rounded-xl bg-brand text-black hover:bg-brand/90 shadow-glow">ارسال</button>
         </form>
-        <div class="mt-6 text-sm text-slate-400">
-          یا ایمیل: <a class="underline decoration-dotted" href="mailto:arad@example.com">arad@example.com</a>
-        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="border-t border-white/10">
-    <div class="container py-8 text-sm text-slate-400 flex flex-wrap items-center justify-between gap-4">
-      <div>© <span id="year"></span> Arad Rezaei — همه حقوق محفوظ است.</div>
-      <div class="flex items-center gap-4">
-        <a class="hover:text-slate-200" href="https://github.com/Aradrezaei" rel="noopener" target="_blank">GitHub</a>
-        <a class="hover:text-slate-200" href="#top">بازگشت به بالا</a>
-      </div>
+    <div class="container py-6 text-sm text-slate-400 flex justify-between flex-wrap gap-4">
+      <span>© <span id="year"></span> Arad Rezaei — همه حقوق محفوظ است.</span>
+      <a href="https://github.com/Aradrezaei" class="hover:text-slate-200" target="_blank">GitHub</a>
     </div>
   </footer>
 
-  <!-- Minimal JS: منو، سال، و انیمیشن ورودی -->
-  <script defer>
-    // سال داینامیک
+  <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // منوی موبایل
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('hidden');
-    });
-
-    // انیمیشن ورود با IntersectionObserver
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    const btn = document.getElementById('menuBtn'), menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click',()=>{menu.classList.toggle('hidden')});
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible')});
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
