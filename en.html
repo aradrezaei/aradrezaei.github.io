@@ -24,14 +24,18 @@
     <link rel="alternate" hreflang="fa" href="https://aradrezaei.github.io/fa.html" />
     <!-- Favicons -->
     <link rel="icon" href="favicon.ico" />
-    <!-- Local Tailwind -->
-        <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { shabnam: ['Shabnam', 'sans-serif'] },
+                    fontFamily: { inter: ['Inter', 'sans-serif'] },
                     colors: {
                         brand: { DEFAULT: '#10b981', dark: '#059669' },
                         base: { 900: '#0f172a', 800: '#111827', 100: '#f1f5f9' }
@@ -55,7 +59,7 @@
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-        html { font-family: 'Shabnam', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        html { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         .glass { backdrop-filter: blur(20px) saturate(180%); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease; }
         .glass:hover { backdrop-filter: blur(24px) saturate(200%); box-shadow: var(--tw-shadow-ultra); }
         .reveal { opacity: 0; transform: translateY(16px); transition: all .6s ease; }
@@ -100,7 +104,7 @@
                         <li><a href="#about" class="px-3 py-2 rounded-xl hover:bg-white/5">About</a></li>
                         <li><a href="#projects" class="px-3 py-2 rounded-xl hover:bg-white/5">Projects</a></li>
                         <li><a href="#resume" class="px-3 py-2 rounded-xl hover:bg-white/5">Resume</a></li>
-                        <li><a href="#contact" class="ms-2 px-4 py-2 rounded-xl bg-brand text-black hover:bg-brand/90">Contact</a></li>
+                        <li><a href="#contact" class="ml-2 px-4 py-2 rounded-xl bg-brand text-black hover:bg-brand/90">Contact</a></li>
                     </ul>
                     <!-- Mobile Menu Button -->
                     <button @click="open = !open" class="md:hidden p-2 rounded-lg hover:bg-white/5">
@@ -129,9 +133,9 @@
                 <div class="grid md:grid-cols-2 gap-10 items-center">
                     <div class="reveal">
                         <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight">
-                            <span class="hero-word">Fast,</span> <span class="hero-word">Secure,</span> <span class="hero-word">and</span> <span class="hero-word text-brand">SEO-Optimized</span> <span class="hero-word">Web</span> <span class="hero-word">Development</span>
+                            Fast, Secure, and <span class="text-brand">SEO-Optimized</span> Web Development
                         </h1>
-                        <p class="mt-4 text-slate-300/90 leading-8 dark:text-slate-700/90">I'm <strong>Arad Rezaei</strong>; Full-Stack Web & App Developer (Next.js / Django REST), Admin System Manager, and Official Technical & Vocational Instructor, focusing on <span class="whitespace-nowrap">Core Web Vitals</span>, SEO, and ultra-modern design.</p>
+                        <p class="mt-4 text-slate-500 leading-8 dark:text-slate-500">I'm Arad Rezaei; Full-Stack Web & App Developer (Next.js / Django REST), Admin System Manager, and Official Technical & Vocational Instructor, focusing on Core Web Vitals, SEO, and ultra-modern design.</p>
                         <div class="mt-6 flex gap-3">
                             <a href="#projects" class="px-5 py-3 rounded-xl bg-gradient-to-r from-brand to-brand-dark text-black font-semibold hover:brightness-110 shadow-glow">View Projects</a>
                             <a href="#contact" class="px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5 dark:border-base-900/15 dark:hover:bg-base-900/5">Start Collaboration</a>
@@ -143,38 +147,57 @@
         <!-- About -->
         <section id="about" class="container py-16 md:py-24 reveal">
             <h2 class="text-3xl font-extrabold mb-6">About Me</h2>
-            <p class="text-slate-300 leading-8 dark:text-slate-700">Full-Stack Web & App Developer with experience in custom panels, secure authentication, booking systems, and professional blogs. Admin System Manager and Official Technical & Vocational Instructor. Main focus on <strong>speed</strong>, <strong>SEO</strong>, <strong>accessibility</strong>, and <strong>modern UI/UX</strong>.</p>
+            <p class="text-slate-500 leading-8 dark:text-slate-500">Full-Stack Web & App Developer with experience in custom panels, secure authentication, booking systems, and professional blogs. Admin System Manager and Official Technical & Vocational Instructor. Main focus on speed, SEO, accessibility, and modern UI/UX.</p>
         </section>
         <!-- Projects -->
         <section id="projects" class="container py-16 md:py-24 reveal">
             <div class="flex justify-between items-center">
-                <h2 class="text-3xl font-extrabold">Projects</h2>
+                <h2 class="text-3xl font-extrabold">Selected Projects</h2>
             </div>
+            <p class="text-slate-500 leading-8 dark:text-slate-500 mb-6">Here are some highlights from my portfolio. I've worked on numerous projects, but these represent a cross-section of my expertise in web and app development.</p>
             <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
                     <a href="https://radcarsauto.com" target="_blank" rel="noopener noreferrer">
                         <img src="thumb-radcars.jpg" alt="RadCars — Car Website" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
                         <div class="p-5">
                             <h3 class="font-bold">RadCars — Car Website</h3>
-                            <p class="mt-2 text-sm text-slate-300 dark:text-slate-700">Luxury car gallery with Next.js + Tailwind + Advanced SEO</p>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">Luxury car gallery with Next.js + Tailwind + Advanced SEO</p>
                         </div>
                     </a>
                 </article>
                 <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
                     <a href="https://chasbline.com" target="_blank" rel="noopener noreferrer">
-                        <img src="thumb-chasbline.jpg" alt="Chasb Line — Adhesive Store Website" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
+                        <img src="chasb-line.png" alt="Chasb Line — Adhesive Store Website" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
                         <div class="p-5">
                             <h3 class="font-bold">Chasb Line — Adhesive Store Website</h3>
-                            <p class="mt-2 text-sm text-slate-300 dark:text-slate-700">Online sales platform with Next.js + Tailwind + Django-DRF + PostgreSQL</p>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">Online sales platform with Next.js + Tailwind + Django-DRF + PostgreSQL</p>
                         </div>
                     </a>
                 </article>
                 <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
                     <a href="https://hadaf.com" target="_blank" rel="noopener noreferrer">
-                        <img src="thumb-hadaf.jpg" alt="Hadaf — Consultation Booking" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
+                        <img src="hadaf.png" alt="Hadaf — Consultation Booking" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
                         <div class="p-5">
                             <h3 class="font-bold">Hadaf — Consultation Booking</h3>
-                            <p class="mt-2 text-sm text-slate-300 dark:text-slate-700">Booking system with Django REST + Next.js + OTP/Panel</p>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">Booking system with Django REST + Next.js + OTP/Panel</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
+                    <a href="https://mintgem.com" target="_blank" rel="noopener noreferrer">
+                        <img src="mint-gem.png" alt="Mintergem — Digital Gaming Currency Platform" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
+                        <div class="p-5">
+                            <h3 class="font-bold">Mintergem — Digital Gaming Currency Platform</h3>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">Gaming currency platform with Next.js + Tailwind + Stripe Integration</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
+                    <a href="https://nakhostin.com" target="_blank" rel="noopener noreferrer">
+                        <img src="naxostin.png" alt="Nakhostin Academy — Online Attendance System" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
+                        <div class="p-5">
+                            <h3 class="font-bold">Nakhostin Academy — Online Attendance System</h3>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">Attendance and management system with Next.js + Tailwind + PostgreSQL</p>
                         </div>
                     </a>
                 </article>
@@ -186,7 +209,7 @@
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass rounded-3xl p-6">
                     <h3 class="font-bold">Skills</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-300 dark:text-slate-700">
+                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
                         <li>HTML/CSS & JS</li>
                         <li>ReactJs, NextJs, Redux</li>
                         <li>Python, Django & DRF</li>
@@ -202,7 +225,7 @@
                 </div>
                 <div class="glass rounded-3xl p-6">
                     <h3 class="font-bold">Experience</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-300 dark:text-slate-700">
+                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
                         <li>RadCars: Full Front/Back Development for Luxury Car Gallery</li>
                         <li>Chasbline: E-commerce Platform with Admin Panel and Payment</li>
                         <li>Hadaf: Consultation Booking System and Admin Panel</li>
@@ -213,7 +236,7 @@
                 </div>
                 <div class="glass rounded-3xl p-6">
                     <h3 class="font-bold">Certificates & Achievements</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-300 dark:text-slate-700">
+                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
                         <li>Web Design (IVTO)</li>
                         <li>ICDL (IVTO)</li>
                         <li>Python Programming (IVTO)</li>
@@ -221,7 +244,7 @@
                         <li>1st Regional Rank in Kharazm Coding 2024</li>
                     </ul>
                     <h3 class="font-bold mt-4">Languages</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-300 dark:text-slate-700">
+                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
                         <li>Persian (Native)</li>
                         <li>English (Fluent)</li>
                     </ul>
@@ -235,7 +258,7 @@
         <section id="contact" class="container py-16 md:py-24 reveal">
             <div class="glass rounded-3xl p-6 md:p-10">
                 <h2 class="text-3xl font-extrabold">Contact Me</h2>
-                <p class="mt-3 text-slate-300 dark:text-slate-700">Have an idea or project? Get in touch.</p>
+                <p class="mt-3 text-slate-500 dark:text-slate-500">Have an idea or project? Get in touch.</p>
                 <form class="mt-6 grid gap-4" action="mailto:aradrezaei010@gmail.com" method="POST">
                     <input name="name" placeholder="Full Name" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand dark:bg-base-900/5 dark:border-base-900/10" />
                     <input name="email" type="email" placeholder="Email" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand dark:bg-base-900/5 dark:border-base-900/10" />
@@ -252,11 +275,10 @@
         </section>
     </main>
     <footer class="border-t border-white/10 dark:border-base-900/10">
-        <div class="container py-6 text-sm text-slate-400 dark:text-slate-600 flex justify-between flex-wrap gap-4">
+        <div class="container py-6 text-sm text-slate-500 dark:text-slate-500 flex justify-between flex-wrap gap-4">
             <span>© <span x-text="new Date().getFullYear()"></span> Arad Rezaei — All rights reserved.</span>
         </div>
     </footer>
-    <script defer src="js/alpine.js"></script>
     <script>
         const io = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
