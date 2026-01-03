@@ -24,6 +24,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     
     <script>
         tailwind.config = {
@@ -88,7 +90,11 @@
                     تماس
                     <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
                 </a></li>
-                
+                                <li><a href="/about.html" class="text-gray-400 hover:text-white transition-colors relative group">
+                    درباره من
+                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+
             </ul>
         </div>
     </nav>
@@ -140,55 +146,56 @@
     </section>
 
     <!-- Tech Stack Highlight -->
-<section class="px-6 lg:px-20 py-20 relative z-10 border-y border-white/5 bg-black/20">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
-            
-            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                <div class="relative">
-                    <i class="fa-brands fa-react text-5xl text-[#61DAFB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(97,218,251,0.7)]"></i>
-                </div>
-                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">NEXT.JS / REACT</span>
+  <!-- Skills Section -->
+    <section id="skills" class="px-6 lg:px-20 py-20 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <div class="font-mono text-xs text-primary tracking-[2px] uppercase mb-4">مهارت‌ها</div>
+                <h2 class="text-4xl lg:text-6xl font-black mb-4">تخصص‌های فنی</h2>
+                <p class="text-lg text-gray-400 max-w-2xl">
+                    ابزارها و فناوری‌هایی که در آن‌ها تخصص دارم.
+                </p>
             </div>
-
-            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                <div class="relative">
-                    <i class="fa-brands fa-python text-5xl text-[#3776AB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(55,118,171,0.7)]"></i>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
+                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                    <div class="relative">
+                        <i class="fa-brands fa-react text-5xl text-[#61DAFB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(97,218,251,0.7)]"></i>
+                    </div>
+                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">NEXT.JS / REACT</span>
                 </div>
-                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">DJANGO / PYTHON</span>
-            </div>
-
-            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                <div class="relative">
-                    <i class="fa-solid fa-wind text-5xl text-[#06B6D4] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.7)]"></i>
+                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                    <div class="relative">
+                        <i class="fa-brands fa-python text-5xl text-[#3776AB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(55,118,171,0.7)]"></i>
+                    </div>
+                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">DJANGO / PYTHON</span>
                 </div>
-                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">TAILWIND CSS</span>
-            </div>
-
-            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                <div class="relative">
-                    <i class="fa-solid fa-mobile-screen-button text-5xl text-[#02569B] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(2,86,155,0.7)]"></i>
+                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                    <div class="relative">
+                        <i class="fa-solid fa-wind text-5xl text-[#06B6D4] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.7)]"></i>
+                    </div>
+                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">TAILWIND CSS</span>
                 </div>
-                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">FLUTTER / DART</span>
-            </div>
-
-            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                <div class="relative">
-                    <i class="fa-solid fa-database text-5xl text-[#336791] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(51,103,145,0.7)]"></i>
+                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                    <div class="relative">
+                        <i class="fa-solid fa-mobile-screen-button text-5xl text-[#02569B] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(2,86,155,0.7)]"></i>
+                    </div>
+                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">FLUTTER / DART</span>
                 </div>
-                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">POSTGRESQL</span>
-            </div>
-
-            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                <div class="relative">
-                    <i class="fa-brands fa-linux text-5xl text-[#FCC624] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(252,198,36,0.7)]"></i>
+                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                    <div class="relative">
+                        <i class="fa-solid fa-database text-5xl text-[#336791] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(51,103,145,0.7)]"></i>
+                    </div>
+                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">POSTGRESQL</span>
                 </div>
-                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">LINUX / DEVOPS</span>
+                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                    <div class="relative">
+                        <i class="fa-brands fa-linux text-5xl text-[#FCC624] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(252,198,36,0.7)]"></i>
+                    </div>
+                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">LINUX / DEVOPS</span>
+                </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="px-6 lg:px-20 py-20 relative z-10">
@@ -332,18 +339,7 @@
                              loading="lazy"
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-6">
-                        <div class="font-mono text-xs text-primary mb-2">[06] Dashboard</div>
-                        <h3 class="text-xl font-bold mb-3">Enterprise Suite</h3>
-                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
-                            داشبورد تحلیلی با Real-time Visualization
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">React</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">D3.js</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Django</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
