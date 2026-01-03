@@ -1,288 +1,426 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" x-data="{ darkMode: localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) }" :class="{ 'dark': darkMode }">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0f172a" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="آراد رضایی" />
-    <meta name="description" content="آراد رضایی — توسعه‌دهنده فول‌استک وب و اپلیکیشن، مدیر سیستم و مدرس رسمی فنی و حرفه‌ای. تمرکز روی سرعت بالا، امنیت قوی و بهینه‌سازی سئو برای پروژه‌های مدرن." />
-    <meta name="keywords" content="آراد رضایی, توسعه‌دهنده وب, فول‌استک دولوپر, Next.js, Django, Tailwind CSS, سئو وبسایت, اپلیکیشن موبایل, مدیر سیستم, مدرس فنی حرفه‌ای, گیت‌هاب آراد رضایی, لینکدین آراد رضایی, اینستاگرام آراد رضایی, توییتر آراد رضایی, آموزشگاه نخستین, توسعه‌دهنده اپلیکیشن, برنامه‌نویس پایتون, ری‌اکت جی‌اس, فلاتر, لاراول" />
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="fa_IR" />
-    <meta property="og:title" content="آراد رضایی | توسعه‌دهنده فول‌استک" />
-    <meta property="og:description" content="وبسایت شخصی آراد رضایی — توسعه وب سریع، ایمن و سئو-محور با تمرکز بر عملکرد بالا و طراحی مدرن." />
-    <meta property="og:url" content="https://aradrezaei.github.io/" />
-    <meta property="og:image" content="https://aradrezaei.github.io/og-cover.jpg" />
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="آراد رضایی | توسعه‌دهنده فول‌استک" />
-    <meta name="twitter:description" content="توسعه وب مدرن با Tailwind، Next.js و Django، با تمرکز بر سئو و سرعت بالا." />
-    <meta name="twitter:image" content="https://aradrezaei.github.io/og-cover.jpg" />
-    <link rel="canonical" href="https://aradrezaei.github.io/" />
-    <link rel="alternate" hreflang="en" href="https://aradrezaei.github.io/en.html" />
-    <!-- Favicons -->
-    <link rel="icon" href="favicon.ico" />
-    <!-- Font Shabnam -->
-    <link rel="preconnect" href="https://cdn.fontcdn.ir" crossorigin />
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" />
-    <!-- Tailwind CSS -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="آراد رضایی، توسعه‌دهنده نرم‌افزار با تخصص در معماری سیستم‌های پیچیده، توسعه راهکارهای مقیاس‌پذیر و نوآوری در فناوری‌های دیجیتال. ارائه خدمات جامع در مهندسی نرم‌افزار برای کسب‌وکارهای مدرن.">
+<meta name="keywords" content="آراد رضایی, Arad Rezaei, توسعه‌دهنده نرم‌افزار, Software Developer, مهندسی نرم‌افزار, Software Engineering, توسعه وب و اپلیکیشن, Web and App Development, بهینه‌سازی عملکرد, Performance Optimization, معماری نرم‌افزار, Software Architecture, توسعه‌دهنده حرفه‌ای, Professional Developer, آراد, اراد رضایی, رضایی, توسعه‌دهنده ایرانی, سیستم‌های توزیع‌شده, Distributed Systems, نوآوری دیجیتال, Digital Innovation">
+<meta name="author" content="Arad Rezaei">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="آراد رضایی | برنامه نویس و توسعه دهنده نرم افزار ">
+<meta property="og:description" content="طراحی و پیاده‌سازی راهکارهای نرم‌افزاری پیشرفته با تمرکز روی کارایی، امنیت و مقیاس‌پذیری. تجربه در پروژه‌های متنوع از توسعه وب تا سیستم‌های هوشمند.">
+<meta property="og:image" content="./arad-rezaei.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aradrezaei.gitthub.io">  <!-- URL سایتتون رو اینجا جایگزین کنید -->
+<meta property="og:site_name" content="Arad Rezaei Portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arad Rezaei - Software Developer">
+<meta name="twitter:description" content="توسعه‌دهنده نرم‌افزار با رویکرد جامع به مهندسی دیجیتال. تخصص در ایجاد سیستم‌های کارآمد و نوآورانه برای چالش‌های کسب‌وکاری.">
+<meta name="twitter:image" content="./arad-rezaei.png">
+<title>آراد رضایی - برنامه نویس و توسعه دهنده نرم افزار</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
+    
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { shabnam: ['Shabnam', 'sans-serif'] },
                     colors: {
-                        brand: { DEFAULT: '#10b981', dark: '#059669' },
-                        base: { 900: '#0f172a', 800: '#111827', 100: '#f1f5f9' }
+                        primary: '#00ff88',
+                        secondary: '#00ccff',
                     },
-                    boxShadow: { glow: '0 0 20px rgba(16,185,129,0.35)', ultra: '0 10px 35px rgba(16,185,129,0.2)' },
-                    container: { center: true, padding: '1rem' },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
-                        'stagger': 'fadeInUp 1s ease-out forwards'
+                    fontFamily: {
+                        sans: ['Vazir', 'Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
                     },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        }
-                    }
                 }
             }
         }
     </script>
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
     <style>
-        html { font-family: 'Shabnam', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-        .glass { backdrop-filter: blur(20px) saturate(180%); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease; }
-        .glass:hover { backdrop-filter: blur(24px) saturate(200%); box-shadow: var(--tw-shadow-ultra); }
-        .reveal { opacity: 0; transform: translateY(16px); transition: all .6s ease; }
-        .reveal.is-visible { opacity: 1; transform: none; }
-        .dark .glass { background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.05); }
-        .hero-word { display: inline-block; opacity: 0; animation: fade-in-up 0.8s ease-out forwards; }
-        .hero-word:nth-child(1) { animation-delay: 0.2s; }
-        .hero-word:nth-child(2) { animation-delay: 0.4s; }
-        .hero-word:nth-child(3) { animation-delay: 0.6s; }
-        .hero-word:nth-child(4) { animation-delay: 0.8s; }
-        .hero-word:nth-child(5) { animation-delay: 1.0s; }
-        .hero-word:nth-child(6) { animation-delay: 1.2s; }
+        ::selection { background: #00ff88; color: #000; }
+        .text-gradient {
+            background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
     </style>
-    <title>آراد رضایی | توسعه‌دهنده فول‌استک</title>
 </head>
-<body class="bg-base-900 dark:bg-base-900 text-slate-100 dark:text-slate-100 font-shabnam selection:bg-brand/30" :class="{ 'bg-base-100 text-base-900 dark:text-base-900': !darkMode }">
-    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 px-4 py-2 rounded-lg bg-brand text-black">پرش به محتوا</a>
-    <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur" x-data="{ open: false }">
-        <nav class="glass">
-            <div class="container flex justify-between items-center py-3">
-                <a href="/" class="flex items-center gap-2">
-                    <span class="text-lg font-bold">آراد رضایی</span>
-                </a>
-                <div class="flex items-center gap-4">
-                    <!-- Language Switch -->
-                    <div class="flex gap-2">
-                        <button class="px-2 py-1 rounded-lg bg-brand text-black">FA</button>
-                        <a href="en.html" class="px-2 py-1 rounded-lg hover:bg-white/5">EN</a>
-                    </div>
-                    <!-- Dark/Light Mode -->
-                    <button @click="darkMode = !darkMode" class="p-2 rounded-lg hover:bg-white/5">
-                        <template x-if="darkMode">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                        </template>
-                        <template x-if="!darkMode">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
-                        </template>
-                    </button>
-                    <!-- Desktop Menu -->
-                    <ul class="hidden md:flex gap-2 items-center flex-row-reverse">
-                        <li><a href="#about" class="px-3 py-2 rounded-xl hover:bg-white/5">درباره من</a></li>
-                        <li><a href="#projects" class="px-3 py-2 rounded-xl hover:bg-white/5">نمونه‌کارها</a></li>
-                        <li><a href="#resume" class="px-3 py-2 rounded-xl hover:bg-white/5">رزومه</a></li>
-                        <li><a href="#contact" class="ms-2 px-4 py-2 rounded-xl bg-brand text-black hover:bg-brand/90">ارتباط با من</a></li>
-                    </ul>
-                    <!-- Mobile Menu Button -->
-                    <button @click="open = !open" class="md:hidden p-2 rounded-lg hover:bg-white/5">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" x-show="!open" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" x-show="open" /></svg>
-                    </button>
-                </div>
+<body class="bg-black text-white font-sans overflow-x-hidden">
+    
+    <!-- Grid Background -->
+    <div class="fixed inset-0 grid-pattern opacity-50 pointer-events-none"></div>
+    
+    <!-- Gradient Orbs -->
+    <div class="fixed top-[-200px] right-[-200px] w-[600px] h-[600px] bg-primary rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+    <div class="fixed bottom-[-200px] left-[-200px] w-[600px] h-[600px] bg-secondary rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+    
+    <!-- Navigation -->
+    <nav id="nav" class="fixed top-0 left-0 right-0 bg-black/70 backdrop-blur-xl border-b border-white/5 px-6 lg:px-20 py-4 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="font-mono text-lg font-bold text-primary flex items-center gap-2">
+                <span>▸</span>
+                <span>arad.dev</span>
             </div>
-            <div x-show="open" class="md:hidden border-t border-white/10" x-transition>
-                <div class="container py-3 grid gap-2">
-                    <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/5">درباره من</a>
-                    <a href="#projects" class="px-3 py-2 rounded-lg hover:bg-white/5">نمونه‌کارها</a>
-                    <a href="#resume" class="px-3 py-2 rounded-lg hover:bg-white/5">رزومه</a>
-                    <a href="#contact" class="px-3 py-2 rounded-lg bg-brand text-black hover:bg-brand/90">ارتباط با من</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main id="main">
-        <!-- Hero -->
-        <section class="relative overflow-hidden">
-            <div class="absolute inset-0 -z-10">
-                <div class="absolute -top-32 -right-28 w-[40rem] h-[40rem] rounded-full bg-brand/10 blur-3xl animate-pulse"></div>
-                <div class="absolute -bottom-40 -left-24 w-[40rem] h-[40rem] rounded-full bg-cyan-400/10 blur-3xl animate-pulse"></div>
-            </div>
-            <div class="container pt-16 md:pt-24 pb-16 md:pb-28">
-                <div class="grid md:grid-cols-2 gap-10 items-center">
-                    <div class="reveal">
-                        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight">
-                            توسعه وب سریع، ایمن و <span class="text-brand">سئو-محور</span>
-                        </h1>
-                        <p class="mt-4 text-slate-500 leading-8 dark:text-slate-500">آراد رضایی هستم؛ توسعه‌دهنده فول‌استک وب و اپلیکیشن (Next.js / Django REST)، مدیر سیستم و مدرس رسمی فنی و حرفه‌ای، با تمرکز بر Core Web Vitals، سئو و طراحی‌های فوق مدرن.</p>
-                        <div class="mt-6 flex gap-3 flex-row-reverse">
-                            <a href="#projects" class="px-5 py-3 rounded-xl bg-gradient-to-r from-brand to-brand-dark text-black font-semibold hover:brightness-110 shadow-glow">مشاهده نمونه‌کارها</a>
-                            <a href="#contact" class="px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5 dark:border-base-900/15 dark:hover:bg-base-900/5">شروع همکاری</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About -->
-        <section id="about" class="container py-16 md:py-24 reveal">
-            <h2 class="text-3xl font-extrabold mb-6">درباره من</h2>
-            <p class="text-slate-500 leading-8 dark:text-slate-500">توسعه‌دهنده فول‌استک وب و اپلیکیشن با تجربه در ساخت پنل‌های سفارشی، احراز هویت امن، سیستم‌های رزرواسیون و وبلاگ‌های حرفه‌ای. مدیر سیستم و مدرس رسمی فنی و حرفه‌ای. تمرکز اصلی من بر سرعت، سئو، دسترسی‌پذیری و طراحی UI/UX مدرن است.</p>
-        </section>
-        <!-- Projects -->
-        <section id="projects" class="container py-16 md:py-24 reveal">
-            <div class="flex justify-between items-center">
-                <h2 class="text-3xl font-extrabold">نمونه‌کارهای منتخب</h2>
-            </div>
-            <p class="text-slate-500 leading-8 dark:text-slate-500 mb-6">در اینجا برخی از پروژه‌های برجسته‌ام را می‌بینید. من روی پروژه‌های زیادی کار کرده‌ام، اما این‌ها بخشی از تخصصم در توسعه وب و اپلیکیشن را نشان می‌دهند.</p>
-            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
-                    <a href="https://radcarsauto.com" target="_blank" rel="noopener noreferrer">
-                        <img src="thumb-radcars.jpg" alt="وبسایت RadCars — گالری خودروهای لوکس" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
-                        <div class="p-5">
-                            <h3 class="font-bold">RadCars — وبسایت خودرو</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">گالری خودروهای لوکس با Next.js + Tailwind + سئوی پیشرفته</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
-                    <a href="https://chasbline.com" target="_blank" rel="noopener noreferrer">
-                        <img src="chasb-line.png" alt="وبسایت Chasb Line — فروشگاه آنلاین چسب" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
-                        <div class="p-5">
-                            <h3 class="font-bold">Chasb Line — فروشگاه چسب</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">پلتفرم فروش آنلاین با Next.js + Tailwind + Django-DRF + PostgreSQL</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
-                    <a href="https://hadaf.com" target="_blank" rel="noopener noreferrer">
-                        <img src="hadaf.png" alt="سامانه Hadaf — رزرو مشاوره" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
-                        <div class="p-5">
-                            <h3 class="font-bold">Hadaf — رزرو مشاوره</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">سامانه رزرو با Django REST + Next.js + OTP/Panel</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
-                    <a href="https://mintgem.com" target="_blank" rel="noopener noreferrer">
-                        <img src="mint-gem.png" alt="Mintergem — پلتفرم ارز دیجیتال گیمینگ" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
-                        <div class="p-5">
-                            <h3 class="font-bold">Mintergem — ارز دیجیتال گیمینگ</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">پلتفرم ارز دیجیتال برای گیمینگ با Next.js + Tailwind + ادغام Stripe</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="glass rounded-3xl overflow-hidden hover:shadow-ultra transition-shadow duration-300">
-                    <a href="https://nakhostin.com" target="_blank" rel="noopener noreferrer">
-                        <img src="naxostin.png" alt="آکادمی Nakhostin — سیستم حضور و غیاب آنلاین" class="w-full aspect-[16/10] object-cover" loading="lazy"/>
-                        <div class="p-5">
-                            <h3 class="font-bold">آکادمی Nakhostin — حضور و غیاب آنلاین</h3>
-                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-500">سیستم مدیریت حضور و غیاب با Next.js + Tailwind + PostgreSQL</p>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-        <!-- Resume -->
-        <section id="resume" class="container py-16 md:py-24 reveal">
-            <h2 class="text-3xl font-extrabold mb-6">رزومه</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass rounded-3xl p-6">
-                    <h3 class="font-bold">مهارت‌ها</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
-                        <li>HTML/CSS & JS</li>
-                        <li>ReactJs, NextJs, Redux</li>
-                        <li>Python, Django & DRF</li>
-                        <li>VueJs, NuxtJs (Pinia)</li>
-                        <li>Flutter برای توسعه اپلیکیشن</li>
-                        <li>Linux و مدیریت سیستم/PC-1</li>
-                        <li>NumPy, Pandas</li>
-                        <li>PHP, Laravel</li>
-                        <li>طراحی API مقیاس‌پذیر و امن</li>
-                        <li>بهینه‌سازی Core Web Vitals و سئو</li>
-                        <li>UI/UX مدرن و دسترسی‌پذیری</li>
-                    </ul>
-                </div>
-                <div class="glass rounded-3xl p-6">
-                    <h3 class="font-bold">تجربیات</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
-                        <li>RadCars: توسعه کامل فرانت و بک برای گالری خودروهای لوکس</li>
-                        <li>Chasbline: پلتفرم فروش آنلاین با پنل مدیریت و پرداخت</li>
-                        <li>Hadaf: سامانه رزرو مشاوره و پنل ادمین</li>
-                        <li>Mintergem: پلتفرم ارز دیجیتال گیمینگ با Next.js</li>
-                        <li>آکادمی Nakhostin: سیستم حضور و غیاب آنلاین</li>
-                        <li>تدریس: مدرس رسمی در آکادمی نخستین (پایتون، فریم‌ورک‌ها)</li>
-                    </ul>
-                </div>
-                <div class="glass rounded-3xl p-6">
-                    <h3 class="font-bold">گواهینامه‌ها و دستاوردها</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
-                        <li>طراحی وب (IVTO)</li>
-                        <li>ICDL (IVTO)</li>
-                        <li>برنامه‌نویسی پایتون (IVTO)</li>
-                        <li>مجوز مدرس IVTO (در حال انجام)</li>
-                        <li>رتبه اول منطقه‌ای در مسابقات کدینگ Kharazm 2024</li>
-                    </ul>
-                    <h3 class="font-bold mt-4">زبان‌ها</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-500">
-                        <li>فارسی (زبان مادری)</li>
-                        <li>انگلیسی (روان)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-6">
-                <a href="resume.pdf" download class="px-5 py-3 rounded-xl bg-brand text-black hover:bg-brand/90 shadow-glow">دانلود رزومه (PDF)</a>
-            </div>
-        </section>
-        <!-- Contact -->
-        <section id="contact" class="container py-16 md:py-24 reveal">
-            <div class="glass rounded-3xl p-6 md:p-10">
-                <h2 class="text-3xl font-extrabold">ارتباط با من</h2>
-                <p class="mt-3 text-slate-500 dark:text-slate-500">اگر ایده یا پروژه‌ای دارید، با من در تماس باشید.</p>
-                <form class="mt-6 grid gap-4" action="mailto:aradrezaei010@gmail.com" method="POST">
-                    <input name="name" placeholder="نام و نام خانوادگی" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand dark:bg-base-900/5 dark:border-base-900/10" />
-                    <input name="email" type="email" placeholder="ایمیل" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand dark:bg-base-900/5 dark:border-base-900/10" />
-                    <textarea name="message" placeholder="جزئیات پروژه..." class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 focus:border-brand min-h-[120px] dark:bg-base-900/5 dark:border-base-900/10"></textarea>
-                    <button class="justify-self-start px-5 py-3 rounded-xl bg-brand text-black hover:bg-brand/90 shadow-glow">ارسال</button>
-                </form>
-                <div class="mt-8 flex gap-4 justify-center md:justify-start flex-row-reverse">
-                    <a href="https://github.com/Aradrezaei" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-                    <a href="https://linkedin.com/in/aradrezaei" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zm-3 19h-4v-4h-2v4H8V10h2v4h2v-4h4v9zm-4-11h-2V6h2v2zM18 8h-2V6h2v2z"/></svg></a>
-                    <a href="https://instagram.com/aradrezaei" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0c-3.24 0-3.644.012-4.91.07-3.31.151-5.09 1.938-5.241 5.241-.058 1.266-.07 1.67-.07 4.91s.012 3.644.07 4.91c.151 3.303 1.931 5.09 5.241 5.241 1.266.058 1.67.07 4.91.07s3.644-.012 4.91-.07c3.303-.151 5.09-1.938 5.241-5.241.058-1.266.07-1.67.07-4.91s-.012-3.644-.07-4.91c-.151-3.303-1.938-5.09-5.241-5.241C15.644.012 15.24 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-10.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a>
-                    <a href="https://twitter.com/aradrezaei" target="_blank" rel="noopener noreferrer" class="hover:text-brand transition-colors" aria-label="Twitter"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="border-t border-white/10 dark:border-base-900/10">
-        <div class="container py-6 text-sm text-slate-500 dark:text-slate-500 flex justify-between flex-wrap gap-4">
-            <span>© <span x-text="new Date().getFullYear()"></span> آراد رضایی — تمام حقوق محفوظ است.</span>
+            <ul class="hidden md:flex gap-8">
+                <li><a href="#home" class="text-gray-400 hover:text-white transition-colors relative group">
+                    خانه
+                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+                <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors relative group">
+                    پروژه‌ها
+                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+                <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors relative group">
+                    تماس
+                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a></li>
+                
+            </ul>
         </div>
-    </footer>
-    <script>
-        const io = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    </script>
-</body>
-</html>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center px-6 lg:px-20 pt-32 pb-20 relative z-10">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Hero Content -->
+                <div>
+                    <div class="inline-block font-mono text-xs text-primary tracking-[2px] uppercase mb-6 px-4 py-2 border border-primary/30">
+                        Full-Stack Engineer
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">
+                        آراد رضایی<br>
+                        <span class="text-gradient text-4xl lg:6xl">توسعه دهنده نرم افزار</span>
+                    </h1>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-8 max-w-xl">
+                        آراد رضایی هستم,توسعه دهنده نرم افزار,طرفدار لینوکس و عاشق یادگیری 
+                    </p>
+
+
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-primary text-black px-8 py-4 font-mono font-semibold hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(0,255,136,0.3)] hover:shadow-[0_0_50px_rgba(0,255,136,0.5)]">
+                            مشاوره رایگان →
+                        </a>
+                        <a href="./resume.pdf" download class="bg-transparent border border-white/10 text-white px-8 py-4 font-mono font-semibold hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.2)] transition-all duration-300">
+                            دانلود رزومه
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <div class="aspect-square rounded border border-white/10 overflow-hidden group relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-10 mix-blend-screen"></div>
+                        <img src="./arad-rezaei.png" 
+                             alt="Arad Rezaei - Full-Stack Developer | آراد رضایی برنامه نویس" 
+                             width="600" 
+                             height="600"
+                             loading="eager"
+                             class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Highlight -->
+<section class="px-6 lg:px-20 py-20 relative z-10 border-y border-white/5 bg-black/20">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
+            
+            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                <div class="relative">
+                    <i class="fa-brands fa-react text-5xl text-[#61DAFB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(97,218,251,0.7)]"></i>
+                </div>
+                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">NEXT.JS / REACT</span>
+            </div>
+
+            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                <div class="relative">
+                    <i class="fa-brands fa-python text-5xl text-[#3776AB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(55,118,171,0.7)]"></i>
+                </div>
+                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">DJANGO / PYTHON</span>
+            </div>
+
+            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                <div class="relative">
+                    <i class="fa-solid fa-wind text-5xl text-[#06B6D4] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.7)]"></i>
+                </div>
+                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">TAILWIND CSS</span>
+            </div>
+
+            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                <div class="relative">
+                    <i class="fa-solid fa-mobile-screen-button text-5xl text-[#02569B] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(2,86,155,0.7)]"></i>
+                </div>
+                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">FLUTTER / DART</span>
+            </div>
+
+            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                <div class="relative">
+                    <i class="fa-solid fa-database text-5xl text-[#336791] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(51,103,145,0.7)]"></i>
+                </div>
+                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">POSTGRESQL</span>
+            </div>
+
+            <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
+                <div class="relative">
+                    <i class="fa-brands fa-linux text-5xl text-[#FCC624] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(252,198,36,0.7)]"></i>
+                </div>
+                <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">LINUX / DEVOPS</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="px-6 lg:px-20 py-20 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <div class="font-mono text-xs text-primary tracking-[2px] uppercase mb-4">Portfolio</div>
+                <h2 class="text-4xl lg:text-6xl font-black mb-4">پروژه‌های منتخب</h2>
+                <p class="text-lg text-gray-400 max-w-2xl">
+                    نمونه‌هایی از پروژه‌های تحویل شده با استانداردهای بالا
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                    <div class="aspect-video bg-gradient-to-br from-gray-900 to-black overflow-hidden">
+                        <img src="thumb-radcars.jpg" 
+                             alt="RadCars Project" 
+                             width="400" 
+                             height="300"
+                             loading="lazy"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="font-mono text-xs text-primary mb-2">[01] E-Commerce</div>
+                        <h3 class="text-xl font-bold mb-3">RadCars Luxury Gallery</h3>
+                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                            گالری خودروهای لوکس با CMS اختصاصی و SEO پیشرفته
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">TypeScript</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                    <div class="aspect-video bg-gradient-to-br from-blue-900/20 to-black overflow-hidden">
+                        <img src="chasb-line.png" 
+                             alt="Chasb Line Project" 
+                             width="400" 
+                             height="300"
+                             loading="lazy"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="font-mono text-xs text-primary mb-2">[02] E-Commerce</div>
+                        <h3 class="text-xl font-bold mb-3">Chasb Line Platform</h3>
+                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                            پلتفرم فروشگاهی با معماری Microservices
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Django REST</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                    <div class="aspect-video bg-gradient-to-br from-purple-900/20 to-black overflow-hidden">
+                        <img src="hadaf.png" 
+                             alt="Hadaf Project" 
+                             width="400" 
+                             height="300"
+                             loading="lazy"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="font-mono text-xs text-primary mb-2">[03] Consultation</div>
+                        <h3 class="text-xl font-bold mb-3">Hadaf Platform</h3>
+                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                            سامانه رزرو مشاوره با احراز هویت OTP
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Django</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">React</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                    <div class="aspect-video bg-gradient-to-br from-green-900/20 to-black overflow-hidden">
+                        <img src="mint-gem.png" 
+                             alt="Mintergem Project" 
+                             width="400" 
+                             height="300"
+                             loading="lazy"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="font-mono text-xs text-primary mb-2">[04] Web3</div>
+                        <h3 class="text-xl font-bold mb-3">Mintergem Gaming</h3>
+                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                            پلتفرم ارز دیجیتال گیمینگ با ادغام Stripe
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Web3.js</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                    <div class="aspect-video bg-gradient-to-br from-yellow-900/20 to-black overflow-hidden">
+                        <img src="naxostin.png" 
+                             alt="Nakhostin Project" 
+                             width="400" 
+                             height="300"
+                             loading="lazy"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="font-mono text-xs text-primary mb-2">[05] LMS</div>
+                        <h3 class="text-xl font-bold mb-3">Nakhostin Academy</h3>
+                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                            سیستم مدیریت حضور و غیاب آنلاین
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">PostgreSQL</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">PWA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                    <div class="aspect-video bg-gradient-to-br from-red-900/20 to-black overflow-hidden">
+                        <img src="" 
+                             alt="Dashboard Project" 
+                             width="400" 
+                             height="300"
+                             loading="lazy"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="font-mono text-xs text-primary mb-2">[06] Dashboard</div>
+                        <h3 class="text-xl font-bold mb-3">Enterprise Suite</h3>
+                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                            داشبورد تحلیلی با Real-time Visualization
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">React</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">D3.js</span>
+                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Django</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-6 lg:px-20 py-20 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="font-mono text-xs text-primary tracking-[2px] uppercase mb-4">Get In Touch</div>
+            <h2 class="text-4xl lg:text-6xl font-black mb-6">همکاری با من</h2>
+
+<div class="grid md:grid-cols-3 gap-6 mb-12">
+    <a href="mailto:aradrezaei00@gmail.com" class="group flex flex-col items-center text-center bg-black/40 border border-white/5 hover:border-[#00ff88]/40 p-8 transition-all duration-300 hover:-translate-y-2 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="mb-4 text-[#00ff88] transition-transform group-hover:scale-110" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+        </svg>
+        <h3 class="font-bold mb-2 text-white">Email</h3>
+        <p class="text-sm text-gray-400 break-all font-mono">aradrezaei00@gmail.com</p>
+    </a>
+
+    <a href="https://www.linkedin.com/in/aradrezaei" target="_blank" class="group flex flex-col items-center text-center bg-black/40 border border-white/5 hover:border-[#00ccff]/40 p-8 transition-all duration-300 hover:-translate-y-2 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="mb-4 text-[#00ccff] transition-transform group-hover:scale-110" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+        </svg>
+        <h3 class="font-bold mb-2 text-white">LinkedIn</h3>
+        <p class="text-sm text-gray-400 font-mono">linkedin.com/in/aradrezaei</p>
+    </a>
+
+    <a href="https://t.me/arad_rezaei" target="_blank" class="group flex flex-col items-center text-center bg-black/40 border border-white/5 hover:border-[#26A5E4]/40 p-8 transition-all duration-300 hover:-translate-y-2 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="mb-4 text-[#26A5E4] transition-transform group-hover:scale-110" viewBox="0 0 24 24">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+        </svg>
+        <h3 class="font-bold mb-2 text-white">Telegram</h3>
+        <p class="text-sm text-gray-400 font-mono">@arad_rezaei</p>
+    </a>
+</div>
+
+            <a href="mailto:aradrezaei010@gmail.com" class="inline-block bg-primary text-black px-12 py-5 font-mono font-semibold hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(0,255,136,0.3)] hover:shadow-[0_0_50px_rgba(0,255,136,0.5)] mb-8">
+                شروع همکاری →
+            </a>
+
+            <div class="flex justify-center gap-4">
+                <a href="https://github.com/Aradrezaei" target="_blank" rel="noopener" aria-label="GitHub" class="w-12 h-12 bg-black/40 border border-white/5 hover:bg-primary hover:border-primary hover:text-black flex items-center justify-center transition-all duration-300">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+            </div>
+
+            </body>
+            </html>
+
+            <script>
+                const langToggle = document.getElementById('lang-toggle');
+let currentLang = 'fa';
+
+function updateLanguage(lang) {
+    // ۱. تغییر متن‌ها
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = translations[lang][key];
+    });
+
+    // ۲. تغییر جهت صفحه (مهم برای تیلویند)
+    document.documentElement.dir = translations[lang].dir;
+    document.documentElement.lang = lang;
+
+    // ۳. تغییر فونت بر اساس زبان
+    if (lang === 'en') {
+        document.body.style.fontFamily = "'Inter', sans-serif";
+        langToggle.textContent = 'FA';
+    } else {
+        document.body.style.fontFamily = "'Vazir', sans-serif";
+        langToggle.textContent = 'EN';
+    }
+}
+
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'fa' ? 'en' : 'fa';
+    updateLanguage(currentLang);
+});
+            </script>
