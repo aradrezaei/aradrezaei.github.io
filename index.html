@@ -1,422 +1,367 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="آراد رضایی، توسعه‌دهنده نرم‌افزار با تخصص در معماری سیستم‌های پیچیده، توسعه راهکارهای مقیاس‌پذیر و نوآوری در فناوری‌های دیجیتال. ارائه خدمات جامع در مهندسی نرم‌افزار برای کسب‌وکارهای مدرن.">
-<meta name="keywords" content="آراد رضایی, Arad Rezaei, توسعه‌دهنده نرم‌افزار, Software Developer, مهندسی نرم‌افزار, Software Engineering, توسعه وب و اپلیکیشن, Web and App Development, بهینه‌سازی عملکرد, Performance Optimization, معماری نرم‌افزار, Software Architecture, توسعه‌دهنده حرفه‌ای, Professional Developer, آراد, اراد رضایی, رضایی, توسعه‌دهنده ایرانی, سیستم‌های توزیع‌شده, Distributed Systems, نوآوری دیجیتال, Digital Innovation">
-<meta name="author" content="Arad Rezaei">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="آراد رضایی | برنامه نویس و توسعه دهنده نرم افزار ">
-<meta property="og:description" content="طراحی و پیاده‌سازی راهکارهای نرم‌افزاری پیشرفته با تمرکز روی کارایی، امنیت و مقیاس‌پذیری. تجربه در پروژه‌های متنوع از توسعه وب تا سیستم‌های هوشمند.">
-<meta property="og:image" content="./arad-rezaei.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://aradrezaei.gitthub.io">  <!-- URL سایتتون رو اینجا جایگزین کنید -->
-<meta property="og:site_name" content="Arad Rezaei Portfolio">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Arad Rezaei - Software Developer">
-<meta name="twitter:description" content="توسعه‌دهنده نرم‌افزار با رویکرد جامع به مهندسی دیجیتال. تخصص در ایجاد سیستم‌های کارآمد و نوآورانه برای چالش‌های کسب‌وکاری.">
-<meta name="twitter:image" content="./arad-rezaei.png">
-<title>آراد رضایی - برنامه نویس و توسعه دهنده نرم افزار</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#00ff88',
-                        secondary: '#00ccff',
-                    },
-                    fontFamily: {
-                        sans: ['Vazir', 'Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        ::selection { background: #00ff88; color: #000; }
-        .text-gradient {
-            background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .grid-pattern {
-            background-image: 
-                linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-        img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
-    </style>
-</head>
-<body class="bg-black text-white font-sans overflow-x-hidden">
-    
-    <!-- Grid Background -->
-    <div class="fixed inset-0 grid-pattern opacity-50 pointer-events-none"></div>
-    
-    <!-- Gradient Orbs -->
-    <div class="fixed top-[-200px] right-[-200px] w-[600px] h-[600px] bg-primary rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
-    <div class="fixed bottom-[-200px] left-[-200px] w-[600px] h-[600px] bg-secondary rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
-    
-    <!-- Navigation -->
-    <nav id="nav" class="fixed top-0 left-0 right-0 bg-black/70 backdrop-blur-xl border-b border-white/5 px-6 lg:px-20 py-4 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="font-mono text-lg font-bold text-primary flex items-center gap-2">
-                <span>▸</span>
-                <span>arad.dev</span>
-            </div>
-            <ul class="hidden md:flex gap-8">
-                <li><a href="#home" class="text-gray-400 hover:text-white transition-colors relative group">
-                    خانه
-                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
-                </a></li>
-                <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors relative group">
-                    پروژه‌ها
-                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
-                </a></li>
-                <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors relative group">
-                    تماس
-                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
-                </a></li>
-                                <li><a href="/about.html" class="text-gray-400 hover:text-white transition-colors relative group">
-                    درباره من
-                    <span class="absolute bottom-[-5px] right-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300"></span>
-                </a></li>
-
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center px-6 lg:px-20 pt-32 pb-20 relative z-10">
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Hero Content -->
-                <div>
-                    <div class="inline-block font-mono text-xs text-primary tracking-[2px] uppercase mb-6 px-4 py-2 border border-primary/30">
-                        Full-Stack Engineer
-                    </div>
-                    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">
-                        آراد رضایی<br>
-                        <span class="text-gradient text-4xl lg:6xl">توسعه دهنده نرم افزار</span>
-                    </h1>
-                    <p class="text-lg text-gray-400 leading-relaxed mb-8 max-w-xl">
-                        آراد رضایی هستم,توسعه دهنده نرم افزار,طرفدار لینوکس و عاشق یادگیری 
-                    </p>
-
-
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="bg-primary text-black px-8 py-4 font-mono font-semibold hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(0,255,136,0.3)] hover:shadow-[0_0_50px_rgba(0,255,136,0.5)]">
-                            مشاوره رایگان →
-                        </a>
-                        <a href="./resume.pdf" download class="bg-transparent border border-white/10 text-white px-8 py-4 font-mono font-semibold hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.2)] transition-all duration-300">
-                            دانلود رزومه
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Hero Image -->
-                <div class="relative">
-                    <div class="aspect-square rounded border border-white/10 overflow-hidden group relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-10 mix-blend-screen"></div>
-                        <img src="./arad-rezaei.png" 
-                             alt="Arad Rezaei - Full-Stack Developer | آراد رضایی برنامه نویس" 
-                             width="600" 
-                             height="600"
-                             loading="eager"
-                             class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Highlight -->
-  <!-- Skills Section -->
-    <section id="skills" class="px-6 lg:px-20 py-20 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <div class="font-mono text-xs text-primary tracking-[2px] uppercase mb-4">مهارت‌ها</div>
-                <h2 class="text-4xl lg:text-6xl font-black mb-4">تخصص‌های فنی</h2>
-                <p class="text-lg text-gray-400 max-w-2xl">
-                    ابزارها و فناوری‌هایی که در آن‌ها تخصص دارم.
-                </p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
-                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                    <div class="relative">
-                        <i class="fa-brands fa-react text-5xl text-[#61DAFB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(97,218,251,0.7)]"></i>
-                    </div>
-                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">NEXT.JS / REACT</span>
-                </div>
-                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                    <div class="relative">
-                        <i class="fa-brands fa-python text-5xl text-[#3776AB] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(55,118,171,0.7)]"></i>
-                    </div>
-                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">DJANGO / PYTHON</span>
-                </div>
-                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                    <div class="relative">
-                        <i class="fa-solid fa-wind text-5xl text-[#06B6D4] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.7)]"></i>
-                    </div>
-                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">TAILWIND CSS</span>
-                </div>
-                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                    <div class="relative">
-                        <i class="fa-solid fa-mobile-screen-button text-5xl text-[#02569B] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(2,86,155,0.7)]"></i>
-                    </div>
-                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">FLUTTER / DART</span>
-                </div>
-                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                    <div class="relative">
-                        <i class="fa-solid fa-database text-5xl text-[#336791] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(51,103,145,0.7)]"></i>
-                    </div>
-                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">POSTGRESQL</span>
-                </div>
-                <div class="group flex flex-col items-center justify-center space-y-4 cursor-default">
-                    <div class="relative">
-                        <i class="fa-brands fa-linux text-5xl text-[#FCC624] transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(252,198,36,0.7)]"></i>
-                    </div>
-                    <span class="text-xs font-mono text-gray-500 tracking-tighter group-hover:text-white transition-colors duration-300">LINUX / DEVOPS</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="px-6 lg:px-20 py-20 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <div class="font-mono text-xs text-primary tracking-[2px] uppercase mb-4">Portfolio</div>
-                <h2 class="text-4xl lg:text-6xl font-black mb-4">پروژه‌های منتخب</h2>
-                <p class="text-lg text-gray-400 max-w-2xl">
-                    نمونه‌هایی از پروژه‌های تحویل شده با استانداردهای بالا
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
-                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
-                    <div class="aspect-video bg-gradient-to-br from-gray-900 to-black overflow-hidden">
-                        <img src="thumb-radcars.jpg" 
-                             alt="RadCars Project" 
-                             width="400" 
-                             height="300"
-                             loading="lazy"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="font-mono text-xs text-primary mb-2">[01] E-Commerce</div>
-                        <h3 class="text-xl font-bold mb-3">RadCars Luxury Gallery</h3>
-                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
-                            گالری خودروهای لوکس با CMS اختصاصی و SEO پیشرفته
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">TypeScript</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
-                    <div class="aspect-video bg-gradient-to-br from-blue-900/20 to-black overflow-hidden">
-                        <img src="chasb-line.png" 
-                             alt="Chasb Line Project" 
-                             width="400" 
-                             height="300"
-                             loading="lazy"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="font-mono text-xs text-primary mb-2">[02] E-Commerce</div>
-                        <h3 class="text-xl font-bold mb-3">Chasb Line Platform</h3>
-                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
-                            پلتفرم فروشگاهی با معماری Microservices
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Django REST</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Redis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
-                    <div class="aspect-video bg-gradient-to-br from-purple-900/20 to-black overflow-hidden">
-                        <img src="hadaf.png" 
-                             alt="Hadaf Project" 
-                             width="400" 
-                             height="300"
-                             loading="lazy"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="font-mono text-xs text-primary mb-2">[03] Consultation</div>
-                        <h3 class="text-xl font-bold mb-3">Hadaf Platform</h3>
-                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
-                            سامانه رزرو مشاوره با احراز هویت OTP
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Django</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">React</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">WebSocket</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
-                    <div class="aspect-video bg-gradient-to-br from-green-900/20 to-black overflow-hidden">
-                        <img src="mint-gem.png" 
-                             alt="Mintergem Project" 
-                             width="400" 
-                             height="300"
-                             loading="lazy"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="font-mono text-xs text-primary mb-2">[04] Web3</div>
-                        <h3 class="text-xl font-bold mb-3">Mintergem Gaming</h3>
-                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
-                            پلتفرم ارز دیجیتال گیمینگ با ادغام Stripe
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Web3.js</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Stripe</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
-                    <div class="aspect-video bg-gradient-to-br from-yellow-900/20 to-black overflow-hidden">
-                        <img src="naxostin.png" 
-                             alt="Nakhostin Project" 
-                             width="400" 
-                             height="300"
-                             loading="lazy"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="font-mono text-xs text-primary mb-2">[05] LMS</div>
-                        <h3 class="text-xl font-bold mb-3">Nakhostin Academy</h3>
-                        <p class="text-sm text-gray-400 mb-4 leading-relaxed">
-                            سیستم مدیریت حضور و غیاب آنلاین
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">Next.js</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">PostgreSQL</span>
-                            <span class="text-xs px-2 py-1 bg-primary/10 text-primary border border-primary/20">PWA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="group bg-black/40 border border-white/5 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-2">
-                    <div class="aspect-video bg-gradient-to-br from-red-900/20 to-black overflow-hidden">
-                        <img src="" 
-                             alt="Dashboard Project" 
-                             width="400" 
-                             height="300"
-                             loading="lazy"
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="px-6 lg:px-20 py-20 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="font-mono text-xs text-primary tracking-[2px] uppercase mb-4">Get In Touch</div>
-            <h2 class="text-4xl lg:text-6xl font-black mb-6">همکاری با من</h2>
-
-<div class="grid md:grid-cols-3 gap-6 mb-12">
-    <a href="mailto:aradrezaei00@gmail.com" class="group flex flex-col items-center text-center bg-black/40 border border-white/5 hover:border-[#00ff88]/40 p-8 transition-all duration-300 hover:-translate-y-2 rounded-xl">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="mb-4 text-[#00ff88] transition-transform group-hover:scale-110" viewBox="0 0 16 16">
-            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-        </svg>
-        <h3 class="font-bold mb-2 text-white">Email</h3>
-        <p class="text-sm text-gray-400 break-all font-mono">aradrezaei00@gmail.com</p>
-    </a>
-
-    <a href="https://www.linkedin.com/in/aradrezaei" target="_blank" class="group flex flex-col items-center text-center bg-black/40 border border-white/5 hover:border-[#00ccff]/40 p-8 transition-all duration-300 hover:-translate-y-2 rounded-xl">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="mb-4 text-[#00ccff] transition-transform group-hover:scale-110" viewBox="0 0 16 16">
-            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-        </svg>
-        <h3 class="font-bold mb-2 text-white">LinkedIn</h3>
-        <p class="text-sm text-gray-400 font-mono">linkedin.com/in/aradrezaei</p>
-    </a>
-
-    <a href="https://t.me/arad_rezaei" target="_blank" class="group flex flex-col items-center text-center bg-black/40 border border-white/5 hover:border-[#26A5E4]/40 p-8 transition-all duration-300 hover:-translate-y-2 rounded-xl">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="mb-4 text-[#26A5E4] transition-transform group-hover:scale-110" viewBox="0 0 24 24">
-            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-        </svg>
-        <h3 class="font-bold mb-2 text-white">Telegram</h3>
-        <p class="text-sm text-gray-400 font-mono">@arad_rezaei</p>
-    </a>
-</div>
-
-            <a href="mailto:aradrezaei010@gmail.com" class="inline-block bg-primary text-black px-12 py-5 font-mono font-semibold hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(0,255,136,0.3)] hover:shadow-[0_0_50px_rgba(0,255,136,0.5)] mb-8">
-                شروع همکاری →
-            </a>
-
-            <div class="flex justify-center gap-4">
-                <a href="https://github.com/Aradrezaei" target="_blank" rel="noopener" aria-label="GitHub" class="w-12 h-12 bg-black/40 border border-white/5 hover:bg-primary hover:border-primary hover:text-black flex items-center justify-center transition-all duration-300">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                </a>
-            </div>
-
-            </body>
-            </html>
-
-            <script>
-                const langToggle = document.getElementById('lang-toggle');
-let currentLang = 'fa';
-
-function updateLanguage(lang) {
-    // ۱. تغییر متن‌ها
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        element.textContent = translations[lang][key];
-    });
-
-    // ۲. تغییر جهت صفحه (مهم برای تیلویند)
-    document.documentElement.dir = translations[lang].dir;
-    document.documentElement.lang = lang;
-
-    // ۳. تغییر فونت بر اساس زبان
-    if (lang === 'en') {
-        document.body.style.fontFamily = "'Inter', sans-serif";
-        langToggle.textContent = 'FA';
-    } else {
-        document.body.style.fontFamily = "'Vazir', sans-serif";
-        langToggle.textContent = 'EN';
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111714">
+  <meta name="description" content="Official website of Arad Rezaei (اراد رضایی), Software Developer. Explore his software development skills and professional contact information.">
+  <meta name="author" content="Arad Rezaei">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
+  <meta name="keywords" content="Arad Rezaei, Arad Rezaei software developer, اراد رضایی, آراد رضایی, برنامه نویس, توسعه دهنده نرم افزار, Software Developer">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Arad Rezaei">
+  <meta property="og:title" content="Arad Rezaei | Software Developer">
+  <meta property="og:description" content="Official website of Arad Rezaei, Software Developer. Technical skills and contact information.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Arad Rezaei | Software Developer">
+  <meta name="twitter:description" content="Official website of Arad Rezaei, Software Developer.">
+  <title>Arad Rezaei | Software Developer | اراد رضایی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arad Rezaei",
+    "alternateName": ["اراد رضایی", "آراد رضایی"],
+    "jobTitle": "Software Developer",
+    "description": "Software developer interested in web development, backend systems, mobile application development and software technologies.",
+    "email": "mailto:aradrezaei00@gmail.com",
+    "sameAs": [
+      "https://x.com/aradrezaeii",
+      "https://github.com/Aradrezaei",
+      "https://www.linkedin.com/in/aradrezaei",
+      "https://t.me/arad_rezaei"
+    ],
+    "knowsAbout": [
+      "Software Development",
+      "Web Development",
+      "Frontend Development",
+      "Backend Development",
+      "Mobile Application Development",
+      "Python",
+      "Django",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Flutter",
+      "Dart",
+      "PostgreSQL",
+      "Linux"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #111714;
+      --surface: #171f1b;
+      --surface-soft: #1b2520;
+      --text: #f2f5f2;
+      --muted: #a4afa8;
+      --subtle: #78847c;
+      --line: #2a3730;
+      --accent: #a8d5b5;
+      --content-width: 1080px;
     }
-}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Inter, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    ::selection { background: var(--accent); color: #111714; }
+    .container { width: min(var(--content-width), calc(100% - 56px)); margin-inline: auto; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .navigation {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .wordmark { font-size: 15px; font-weight: 700; letter-spacing: -.04em; }
+    .wordmark span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { color: var(--muted); font-size: 13px; transition: color .15s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .hero {
+      min-height: 540px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-block: 100px 112px;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 25px 0 22px;
+      max-width: 900px;
+      font-size: clamp(52px, 8.5vw, 96px);
+      line-height: 1.04;
+      letter-spacing: -.075em;
+      font-weight: 600;
+    }
+    .role { color: var(--accent); }
+    .intro {
+      max-width: 610px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.8;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 19px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background-color .15s ease, border-color .15s ease;
+    }
+    .button-primary { background: var(--accent); border-color: var(--accent); color: #142018; }
+    .button-primary:hover { background: #b9dfc4; border-color: #b9dfc4; }
+    .button-secondary { color: var(--text); }
+    .button-secondary:hover { border-color: #607568; background: var(--surface); }
+    .section { padding-block: 76px; border-top: 1px solid var(--line); }
+    .section-heading { margin-bottom: 34px; }
+    .section-kicker {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 12px 0 0;
+      font-size: clamp(30px, 5vw, 43px);
+      line-height: 1.15;
+      letter-spacing: -.055em;
+      font-weight: 600;
+    }
+    .section-description {
+      max-width: 590px;
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .skill-group {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--surface);
+    }
+    .skill-group h3 {
+      margin: 0 0 17px;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill {
+      padding: 7px 9px;
+      border: 1px solid #344139;
+      border-radius: 3px;
+      color: #c3cdc6;
+      font-size: 11px;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-copy { color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 330px; }
+    .contact-list { border-top: 1px solid var(--line); }
+    .contact-link {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .contact-link span:first-child { color: var(--muted); }
+    .contact-link span:last-child { color: var(--text); text-align: right; }
+    .contact-link:hover span:last-child { color: var(--accent); }
+    .contact-link .arrow { color: var(--subtle); padding-left: 8px; }
+    .footer {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--subtle);
+      font-size: 11px;
+    }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 38px, var(--content-width)); }
+      .navigation { min-height: 70px; }
+      .nav-links { gap: 17px; }
+      .nav-links a { font-size: 12px; }
+      .hero { min-height: 490px; padding-block: 82px; }
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .contact-layout { grid-template-columns: 1fr; gap: 24px; }
+      .section { padding-block: 62px; }
+    }
+    @media (max-width: 480px) {
+      .nav-links { gap: 13px; }
+      .nav-links a { font-size: 11px; }
+      .wordmark { font-size: 13px; }
+      .hero { min-height: 460px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-group { padding: 19px; }
+      .footer { align-items: flex-start; justify-content: center; flex-direction: column; padding-block: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container navigation" aria-label="Main navigation">
+      <a class="wordmark" href="#home" aria-label="Arad Rezaei home"><span>AR.</span> ARAD REZAEI</a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'fa' ? 'en' : 'fa';
-    updateLanguage(currentLang);
-});
-            </script>
+  <main id="home">
+    <section class="container hero" aria-labelledby="page-title">
+      <div class="eyebrow">Personal Website</div>
+      <h1 id="page-title">Arad Rezaei<span>.</span><br><span class="role">Software Developer</span></h1>
+      <p class="intro">
+        I am a software developer focused on building practical digital products
+        and developing reliable web and application solutions. I value clear
+        code, thoughtful design, and continuous learning.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#contact">Get in touch</a>
+        <a class="button button-secondary" href="#skills">Explore my skills</a>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Technical Skills</div>
+          <h2 id="skills-title">Technologies &amp; Skills</h2>
+          <p class="section-description">A selection of technologies and tools I work with across software development.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Frontend Development</h3>
+            <div class="skill-list">
+              <span class="skill">HTML</span><span class="skill">CSS</span>
+              <span class="skill">JavaScript</span><span class="skill">TypeScript</span>
+              <span class="skill">React</span><span class="skill">Next.js</span>
+              <span class="skill">Tailwind CSS</span>
+            </div>
+          </article>
+          <article class="skill-group">
+            <h3>Backend Development</h3>
+            <div class="skill-list">
+              <span class="skill">Python</span><span class="skill">Django</span>
+              <span class="skill">REST APIs</span><span class="skill">Bun</span>
+              <span class="skill">Hono</span>
+            </div>
+          </article>
+          <article class="skill-group">
+            <h3>Mobile Development</h3>
+            <div class="skill-list">
+              <span class="skill">Flutter</span><span class="skill">Dart</span>
+            </div>
+          </article>
+          <article class="skill-group">
+            <h3>Databases</h3>
+            <div class="skill-list">
+              <span class="skill">PostgreSQL</span><span class="skill">Redis</span>
+              <span class="skill">Drizzle ORM</span>
+            </div>
+          </article>
+          <article class="skill-group">
+            <h3>Development Tools</h3>
+            <div class="skill-list">
+              <span class="skill">Git</span><span class="skill">Linux</span>
+              <span class="skill">DevOps</span>
+            </div>
+          </article>
+          <article class="skill-group">
+            <h3>Core Technologies</h3>
+            <div class="skill-list">
+              <span class="skill">TypeScript</span><span class="skill">JavaScript</span>
+              <span class="skill">Python</span><span class="skill">Dart</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2 id="contact-title">Get in touch</h2>
+          <p class="contact-copy">For professional inquiries and conversations, you can reach me through email or connect with me on the platforms below.</p>
+        </div>
+        <div class="contact-list">
+          <a class="contact-link" href="mailto:aradrezaei00@gmail.com">
+            <span>Email</span><span>aradrezaei00@gmail.com <b class="arrow">↗</b></span>
+          </a>
+          <a class="contact-link" href="https://x.com/aradrezaeii" target="_blank" rel="noopener noreferrer">
+            <span>X</span><span>@aradrezaeii <b class="arrow">↗</b></span>
+          </a>
+          <a class="contact-link" href="https://github.com/Aradrezaei" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span><span>github.com/Aradrezaei <b class="arrow">↗</b></span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/aradrezaei" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span><span>linkedin.com/in/aradrezaei <b class="arrow">↗</b></span>
+          </a>
+          <a class="contact-link" href="https://t.me/arad_rezaei" target="_blank" rel="noopener noreferrer">
+            <span>Telegram</span><span>@arad_rezaei <b class="arrow">↗</b></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year"></span> Arad Rezaei. All rights reserved.</span>
+    <span>Software Developer</span>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
